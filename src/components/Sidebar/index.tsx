@@ -11,8 +11,7 @@ export default function Sidebar() {
     >
       {!expanded ? (
         <>
-          {" "}
-          <div className="flex flex-col items-center justify-start gap-[2rem]  px-5 ">
+          <div className="flex flex-col items-center justify-start gap-[2rem] w-[5rem]">
             <Image src="/logo.svg" height={40} width={40} alt="asset" />
             <Image src="/vault.svg" height={25} width={25} alt="asset" />
             <Image src="/network.svg" height={25} width={25} alt="asset" />
@@ -21,7 +20,7 @@ export default function Sidebar() {
         </>
       ) : (
         <>
-          <div className="flex w-full flex-col  items-center px-[1.5rem]">
+          <div className="flex w-full flex-col items-center px-[1.5rem]">
             <div className="mb-[2.2rem] flex  items-center justify-between gap-2 ">
               <h1 className="text-xl  text-secondary ">vault</h1>
               <Image src="/logo.svg" height={20} width={20} alt="asset" />

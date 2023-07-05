@@ -7,7 +7,7 @@ type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <section className="bg-dark h-[100vh] text-white flex items-center justify-between">
+    <section className="bg-dark h-[100vh] w-[100vw] text-white flex items-center justify-between">
       <Sidebar />
       <AppContent />
     </section>
