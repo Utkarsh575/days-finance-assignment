@@ -10,6 +10,7 @@ export default {
         active: "#41466A",
         tertiary: "#17192F",
         dark: "#0F0F0F",
+        accent:"#4E505E66"
       },
     },
   },

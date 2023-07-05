@@ -1,8 +1,21 @@
+import React from "react";
 import Navbar from "../Navbar";
+
+const pages = [
+  "Overview",
+  "Portfolio",
+  "Financials",
+  "Fees",
+  "Depositors",
+  "Trade",
+];
+
 export default function AppContent() {
+  const [selectedPage, setSelectedPage] = React.useState<string>("Financials");
+
   return (
-    <section className=" flex flex-col bg-[] w-full h-[95%] mx-5">
-      <Navbar />
+    <section className=" mx-5 flex h-[95%] w-full flex-col bg-[]">
+      <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
       <h1>Appcontnet</h1>
     </section>
   );

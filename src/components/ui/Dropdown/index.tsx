@@ -1,16 +1,23 @@
 import React from "react";
 import Image from "next/image";
+import { chain } from "~/types/DropdownTypes";
 
-export default function Dropdown() {
-  type chain = "GIOBRAC" | "POLYGON" | "SOLANA" | "ETHEREUM";
+type InputProps = {
+  items: string[] ;
+  setItem: React.Dispatch<React.SetStateAction<chain>>;
+  selectedItem: string;
+};
 
-  const chains = ["GIOBRAC", "POLYGON", "SOLANA", "ETHEREUM"];
+export default function ChainSelect(props: InputProps) {
+  const { items, setItem, selectedItem, ...rest } = props;
+
+  // const chains = ["GIOBRAC", "POLYGON", "SOLANA", "ETHEREUM"];
 
   const [toggled, setToggled] = React.useState(false);
-  const [chain, setChain] = React.useState<chain>("GIOBRAC");
+  // const [chain, setChain] = React.useState<string>("GIOBRAC");
 
   const handelChange = (e: number) => {
-    setChain(chains[e] as chain);
+    setItem(items[e] as chain);
     setToggled(!toggled);
   };
   return (
@@ -19,13 +26,13 @@ export default function Dropdown() {
         className="relative flex h-[3rem] w-[9rem] items-center justify-evenly rounded-lg bg-primary text-white"
         onClick={() => setToggled(!toggled)}
       >
-        <Image src={`/${chain}.svg`} width={25} height={25} alt="chain" />
-        <span>{chain}</span>
+        <Image src={`/${selectedItem}.svg`} width={25} height={25} alt="chain" />
+        <span>{selectedItem}</span>
         <Image width={10} height={10} alt="arrow" src="/arrow.svg" />
       </button>
       {toggled && (
         <ul className="absolute  w-[9rem] translate-y-[3.1rem] rounded-lg bg-tertiary text-white ">
-          {chains.map((elem, idx) => {
+          {items.map((elem, idx) => {
             return (
               <li
                 key={idx}
