@@ -24,14 +24,15 @@ export default function AppContent() {
     <section className=" mx-5 flex h-[95%] w-full flex-col overflow-scroll xl:overflow-x-hidden ">
       <Navbar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
       <section className=" h-full ">
-        {basicData.map((e) => {
+        {basicData.map((e, idx) => {
           return (
             <>
-              <Placeholder heading={e.heading}>
-                {e.info.map((e) => {
+              <Placeholder key={idx} heading={e.heading}>
+                {e.info.map((e, idx) => {
                   return (
                     <>
                       <Card
+                        key={idx}
                         title={e.title}
                         primaryText={e.primaryText}
                         secondaryText={e.secondaryText}
@@ -44,14 +45,14 @@ export default function AppContent() {
             </>
           );
         })}
-        {returnMetricsData.map((e) => {
+        {returnMetricsData.map((e, idx) => {
           return (
             <>
-              <Placeholder heading={e.heading}>
-                {e.info.map((e) => {
+              <Placeholder key={idx} heading={e.heading}>
+                {e.info.map((e, idx) => {
                   return (
                     <>
-                      <InfoCard metric={e.metric} value={e.value} />
+                      <InfoCard key={idx} metric={e.metric} value={e.value} />
                     </>
                   );
                 })}
@@ -59,14 +60,15 @@ export default function AppContent() {
             </>
           );
         })}
-        {riskMetricsData.map((e) => {
+        {riskMetricsData.map((e, idx) => {
           return (
             <>
-              <Placeholder heading={e.heading}>
-                {e.info.map((e) => {
+              <Placeholder key={idx} heading={e.heading}>
+                {e.info.map((e, idx) => {
                   return (
                     <>
                       <InfoCard
+                        key={idx}
                         metric={e.metric}
                         value={e.value}
                         className={e.className}
