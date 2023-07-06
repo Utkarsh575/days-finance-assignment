@@ -10,7 +10,10 @@ export default {
         active: "#41466A",
         tertiary: "#17192F",
         dark: "#0F0F0F",
-        accent:"#4E505E66"
+        accent:"#4E505E66",
+        ribbon:"#1D1E32",
+        placeholder:"#10122D",
+        card:"rgba(34, 48, 65, 0.31)"
       },
     },
   },

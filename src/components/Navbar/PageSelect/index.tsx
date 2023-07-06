@@ -33,7 +33,7 @@ export default function PageSelect({
           );
         })}
       </div>
-      <Dropdown className="" items={pages} selectedItem={selectedPage} setItem={setSelectedPage}/>
+      <Dropdown className="flex md:hidden " items={pages} selectedItem={selectedPage} setItem={setSelectedPage}/>
     </>
   );
 }
