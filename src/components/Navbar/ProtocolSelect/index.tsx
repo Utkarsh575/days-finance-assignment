@@ -6,7 +6,7 @@ import { protocol } from "~/types/DropdownTypes";
 export default function ProtocolSelect() {
 
 
-  const protocols = ["Arbitum", "zkSync", "Avalanche", "Base"];
+  const protocols = ["Arbitrum", "BNB Chain", "Avalanche", "Polygon"];
 
   const [toggled, setToggled] = React.useState(false);
   const [protocol, setProtocol] = React.useState<string>("Arbitum");
