@@ -2,7 +2,7 @@ import React from "react";
 import Dropdown from "../../ui/Dropdown";
 import { chain } from "~/types/DropdownTypes";
 export default function ChainSelect() {
-  const chains = ["GIOBRAC", "POLYGON", "SOLANA", "ETHEREUM"];
+  const chains = ["GIOBRAC", "Polygon", "Solana", "Ethereum"];
 
   const [toggled, setToggled] = React.useState(false);
   const [chain, setChain] = React.useState<string>("GIOBRAC");
